@@ -7,6 +7,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.ClickOnBy;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.EnterValue;
 
 import java.util.Map;
 
@@ -31,7 +33,20 @@ public class NuevoFlujo implements Task {
         public <T extends Actor> void performAs (T actor){
             actor.attemptsTo(
                     Click.on(ELEMENT),
-                    Click.on(WEB_TABLE)
+                    Click.on(WEB_TABLE),
+                    Click.on(ADD_REGISTER),
+                    Click.on(FIRST_NAME), Enter.theValue(flujouno.getFirstName()).into(FIRST_NAME),
+                    Click.on(LAST_NAME), Enter.theValue(flujouno.getLastName()).into(LAST_NAME),
+                    Click.on(EMAIL), Enter.theValue(flujouno.getEmail()).into(EMAIL),
+                    Click.on(AGE), Enter.theValue(flujouno.getAge()).into(AGE),
+                    Click.on(SALARY), Enter.theValue(flujouno.getSalary()).into(SALARY),
+                    Click.on(DEPARTMENT), Enter.theValue(flujouno.getDepartment()).into(DEPARTMENT),
+                    Click.on(SUBMIT),
+                    Click.on(DELETE)
+
+
+
+
             );
         }
 

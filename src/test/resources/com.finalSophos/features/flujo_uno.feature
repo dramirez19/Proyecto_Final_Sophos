@@ -15,7 +15,7 @@
       | Age        | 28                 |
       | Salary     | 2000               |
       | Department | QA Automation      |
-
+      Then Validar la exitosa creacion del registro de nombre "Daniel"
 
 
 
