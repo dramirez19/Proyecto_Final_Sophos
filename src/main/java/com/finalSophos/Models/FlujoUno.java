@@ -1,6 +1,4 @@
-package com.finalSophos.models;
-
-import java.security.PrivateKey;
+package com.finalSophos.Models;
 
 public class FlujoUno {
 

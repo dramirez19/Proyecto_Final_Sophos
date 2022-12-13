@@ -1,18 +1,16 @@
-package com.finalSophos.tasks;
+package com.finalSophos.Tasks;
 
-import com.finalSophos.models.FlujoUno;
+import com.finalSophos.Models.FlujoUno;
 import io.cucumber.datatable.DataTable;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.ClickOnBy;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.EnterValue;
 
 import java.util.Map;
 
-import static com.finalSophos.userinterface.FlujoUnoPage.*;
+import static com.finalSophos.UserInterface.FlujoUnoPage.*;
 
 public class NuevoFlujo implements Task {
 

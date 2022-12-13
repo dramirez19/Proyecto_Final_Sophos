@@ -1,7 +1,7 @@
 package com.finalSophos.stepdefinitions;
 
 import com.finalSophos.Questions.ValidarRegistro;
-import com.finalSophos.tasks.NuevoFlujo;
+import com.finalSophos.Tasks.NuevoFlujo;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import static com.finalSophos.userinterface.FlujoUnoPage.VALIDAR;
+import static com.finalSophos.UserInterface.FlujoUnoPage.VALIDAR;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.Matchers.equalTo;
@@ -34,4 +34,5 @@ public class flujo_unoStepDefinitions {
     public void validarExitosaCreacionDelRegistro(String register) {
         theActorInTheSpotlight().should(seeThat(ValidarRegistro.with(VALIDAR,register),equalTo(register)));
     }
+
 }

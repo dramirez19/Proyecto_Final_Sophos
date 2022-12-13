@@ -1,4 +1,4 @@
-package com.finalSophos.userinterface;
+package com.finalSophos.UserInterface;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 
