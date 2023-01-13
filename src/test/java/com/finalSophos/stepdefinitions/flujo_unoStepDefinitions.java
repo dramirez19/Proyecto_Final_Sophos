@@ -22,7 +22,7 @@ public class flujo_unoStepDefinitions {
 
     @Given("{string} Desea navegar a la pagina web {string}")
     public void deseaNavegarAlaPaginaWeb(String actor, String url){
-        theActorCalled(actor).attemptsTo(Open.url(url));
+                theActorCalled(actor).attemptsTo(Open.url(url));
     }
 
     @When("Crear nuevo registro en la opcion Web Tables")

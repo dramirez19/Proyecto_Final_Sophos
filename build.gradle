@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-apply plugin: 'net.serenity-bdd.aggregator'
+//apply plugin: 'net.serenity-bdd.aggregator'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
 group 'org.example'
@@ -70,3 +70,4 @@ test {
 serenity {
     reports = ["single-page-html"]
 }
+

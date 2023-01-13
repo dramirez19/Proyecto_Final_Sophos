@@ -9,4 +9,6 @@ public class FlujoDosPage extends PageObject {
     public static final Target DATE_PICKER = Target.the("Botón Date Picker").locatedBy("(//*[@id='item-2'])[3]");
     public static final Target SELECT_DATE = Target.the("Campo Select Date").locatedBy("//*[@id='datePickerMonthYearInput']");
     public static final Target SELECT_DAY = Target.the("Campo Select Day").locatedBy("//*[@class='react-datepicker__week']//div[contains(text(),'{0}')]");
+    public static final Target SELECT_DATE_TIME = Target.the("Campo Select Time").locatedBy("//*[@id='dateAndTimePickerInput']");
+    public static final Target SELECT_TIME = Target.the("Campo Select Time").locatedBy("//*[@class='react-datepicker__time-list']//li[contains(text(),'{0}')]");
 }

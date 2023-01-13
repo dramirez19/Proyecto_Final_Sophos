@@ -23,31 +23,19 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<!--[if IE 7]>
-<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
-
-<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
-
-<!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
-<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
-<script src="chartist/dist/chartist.min.js"></script>
-<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
-<!-- Required Stylesheets -->
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -71,7 +59,16 @@
 </script>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/link.css"/>
-<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
 <link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
 <script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
@@ -117,7 +114,7 @@
         <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
         <div id="projectname-banner" style="float:right">
             <span class="projectname">
-                <span class="projecttitle"></span>
+                <span class="projecttitle">Proyecto Final Sophos</span>
                 <span class="projectsubtitle"></span>
             </span>
         </div>
@@ -145,13 +142,13 @@
 <div>
     <ul class="nav nav-tabs" role="tablist">
         <li class="active">
-            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
         </li>
         <li >
-            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-12-2022 17:42</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-12-2022 15:37</span>
     <br style="clear:left"/>
 </div>
 
@@ -166,7 +163,7 @@
                         <td>
                             <div>
                                 <h3 class="discreet-story-header">
-                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
                                     <span class="story-header-title">Automatizacion De Elements -&gt; Web Tables</span>
                                     <span class="badge tag-badge" style="">Feature</span>
                                 </h3>
@@ -188,7 +185,7 @@ Para evaluar ciertas funcionalidades
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">Ingresar a Elements -&gt; Web Tables de la p&aacute;gina web
                                     <span class="related-issue-title"></span>
@@ -209,63 +206,60 @@ Para evaluar ciertas funcionalidades
     <div id="contenttilttle">
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="78e8f313e8563d48f0ccba12b197d4c73a2c335393e3e06609633295ece356d4.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot;" width="1440"/>
-                <img src="78e8f313e8563d48f0ccba12b197d4c73a2c335393e3e06609633295ece356d4.png" title=" Actor opens the https://demoqa.com/" width="1440"/>
-                <img src="78e8f313e8563d48f0ccba12b197d4c73a2c335393e3e06609633295ece356d4.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot; (completed)" width="1440"/>
-                <img src="9a9de16c1d131e710208d9a08b5cb0697a2d51e0d269b4dc5d76e4538095c871.png" title=" When Crear nuevo registro en la opcion Web Tables
+                <img src="0f82bc4dcd7d277e5dfb87cdc2dd9608c9d21c7d6c6ad79a95b691653f7a60c2.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot;" width="1440"/>
+                <img src="0f82bc4dcd7d277e5dfb87cdc2dd9608c9d21c7d6c6ad79a95b691653f7a60c2.png" title=" Actor opens the browser at https://demoqa.com/" width="1440"/>
+                <img src="0f82bc4dcd7d277e5dfb87cdc2dd9608c9d21c7d6c6ad79a95b691653f7a60c2.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot; (completed)" width="1440"/>
+                <img src="1fa5d9f3ce8815b7ba63029f1339170302f553922299a242bcb1b7427c6d03e0.png" title=" When Crear nuevo registro en la opcion Web Tables
 | First_Name | Daniel |
 | Last_Name | Ramirez |
 | Email | prueba@gmail.com |
 | Age | 28 |
 | Salary | 2000 |
 | Department | QA Automation |" width="1440"/>
-                <img src="6343a012b4e734e06306d45c998062fe58dcd06ff5c508e9921f9e31b41b2efe.png" title=" Actor nuevo flujo" width="1440"/>
-                <img src="6343a012b4e734e06306d45c998062fe58dcd06ff5c508e9921f9e31b41b2efe.png" title=" Actor clicks on Bot&oacute;n Elements" width="1440"/>
-                <img src="b49cce290ffdd0abfa0333ecb76749afa4a5614b9d01a07b87e908cfe92df923.png" title=" Actor clicks on Bot&oacute;n Elements (completed)" width="1440"/>
-                <img src="b49cce290ffdd0abfa0333ecb76749afa4a5614b9d01a07b87e908cfe92df923.png" title=" Actor clicks on Bot&oacute;n Web Tables" width="1440"/>
-                <img src="64a380a5009d4bec7720f58176722171be057a5ff7d89f61c7d7e8b48edc1156.png" title=" Actor clicks on Bot&oacute;n Web Tables (completed)" width="1440"/>
-                <img src="64a380a5009d4bec7720f58176722171be057a5ff7d89f61c7d7e8b48edc1156.png" title=" Actor clicks on Bot&oacute;n Add" width="1440"/>
-                <img src="79b4a289fa3d0fd44869a0c6e6d5e8c4819aea32ad1836d8e6192719c02d265c.png" title=" Actor clicks on Bot&oacute;n Add (completed)" width="1440"/>
-                <img src="79b4a289fa3d0fd44869a0c6e6d5e8c4819aea32ad1836d8e6192719c02d265c.png" title=" Actor clicks on Campo First Name" width="1440"/>
-                <img src="c986a37fd5581fcbadef2350bc11b580dc642bad1063f4d8e51fcf30b8bd999d.png" title=" Actor clicks on Campo First Name (completed)" width="1440"/>
-                <img src="c986a37fd5581fcbadef2350bc11b580dc642bad1063f4d8e51fcf30b8bd999d.png" title=" Actor enters 'Daniel' into Campo First Name" width="1440"/>
-                <img src="1fda4d7d1de1b8814b3885d20cbba415dcde68d8ff814c305ab59a9488f0de81.png" title=" Actor enters 'Daniel' into Campo First Name (completed)" width="1440"/>
-                <img src="1fda4d7d1de1b8814b3885d20cbba415dcde68d8ff814c305ab59a9488f0de81.png" title=" Actor clicks on Campo Last Name" width="1440"/>
-                <img src="f390baaea03740e4de19e5aaa81845a8d70f197cdbe3302a0d0580831b7c5fbc.png" title=" Actor clicks on Campo Last Name (completed)" width="1440"/>
-                <img src="f390baaea03740e4de19e5aaa81845a8d70f197cdbe3302a0d0580831b7c5fbc.png" title=" Actor enters 'Ramirez' into Campo Last Name" width="1440"/>
-                <img src="1475c67c1c7bbc4e3d43b2eedc4bb4e74c8cc1c3b6d6ce8010a39181109f7cce.png" title=" Actor enters 'Ramirez' into Campo Last Name (completed)" width="1440"/>
-                <img src="1475c67c1c7bbc4e3d43b2eedc4bb4e74c8cc1c3b6d6ce8010a39181109f7cce.png" title=" Actor clicks on Campo Email" width="1440"/>
-                <img src="5ce559b9e7acca3a761d1df9c2024dd8727363a22de19f736e6007f7986aa12f.png" title=" Actor clicks on Campo Email (completed)" width="1440"/>
-                <img src="5ce559b9e7acca3a761d1df9c2024dd8727363a22de19f736e6007f7986aa12f.png" title=" Actor enters 'prueba@gmail.com' into Campo Email" width="1440"/>
-                <img src="e12c2e8d89b87ac8eaef608af6a32f47a61436d71499e085ccee7e1be61d1405.png" title=" Actor enters 'prueba@gmail.com' into Campo Email (completed)" width="1440"/>
-                <img src="e12c2e8d89b87ac8eaef608af6a32f47a61436d71499e085ccee7e1be61d1405.png" title=" Actor clicks on Campo Age" width="1440"/>
-                <img src="7498ab1997ec546c1f63ece6db4744424be3a476c12fafe9bfb977c7cbb768e4.png" title=" Actor clicks on Campo Age (completed)" width="1440"/>
-                <img src="7498ab1997ec546c1f63ece6db4744424be3a476c12fafe9bfb977c7cbb768e4.png" title=" Actor enters '28' into Campo Age" width="1440"/>
-                <img src="9e4a7bb96a74381f7421e7b67845000d110a43055c7b4c2ca3f3d05088ac0e6c.png" title=" Actor enters '28' into Campo Age (completed)" width="1440"/>
-                <img src="9e4a7bb96a74381f7421e7b67845000d110a43055c7b4c2ca3f3d05088ac0e6c.png" title=" Actor clicks on Campo Salary" width="1440"/>
-                <img src="f136a0c9633c2299c75c47b57581f4518c21dcc1f5e6ba949c85637ee7c4abcc.png" title=" Actor clicks on Campo Salary (completed)" width="1440"/>
-                <img src="f136a0c9633c2299c75c47b57581f4518c21dcc1f5e6ba949c85637ee7c4abcc.png" title=" Actor enters '2000' into Campo Salary" width="1440"/>
-                <img src="7e20c37b761ec4534a1c65087b8d3ac9fa2ede7df6ce39978cf9b2247ace4068.png" title=" Actor enters '2000' into Campo Salary (completed)" width="1440"/>
-                <img src="7e20c37b761ec4534a1c65087b8d3ac9fa2ede7df6ce39978cf9b2247ace4068.png" title=" Actor clicks on Campo Department" width="1440"/>
-                <img src="020c9fd9279411dec806f8b16c038192b0491cab85064ca629a6dcfc79dfc75c.png" title=" Actor clicks on Campo Department (completed)" width="1440"/>
-                <img src="020c9fd9279411dec806f8b16c038192b0491cab85064ca629a6dcfc79dfc75c.png" title=" Actor enters 'QA Automation' into Campo Department" width="1440"/>
-                <img src="3334d9d7a6b288996098b0d61d55100ac9d9e7c81eb66f889af1e919d69d8af3.png" title=" Actor enters 'QA Automation' into Campo Department (completed)" width="1440"/>
-                <img src="3334d9d7a6b288996098b0d61d55100ac9d9e7c81eb66f889af1e919d69d8af3.png" title=" Actor clicks on Bot&oacute;n Submit" width="1440"/>
-                <img src="32e604b5fce83d12138969bfbc28db40d1d8723c92cd7bb4c5ec5e96925e9dd2.png" title=" Actor clicks on Bot&oacute;n Submit (completed)" width="1440"/>
-                <img src="32e604b5fce83d12138969bfbc28db40d1d8723c92cd7bb4c5ec5e96925e9dd2.png" title=" Actor clicks on Bot&oacute;n Submit" width="1440"/>
-                <img src="c06dbfd2b608b3d993a85397140b1856bd587c5ec55042469b790d3c7cd5351f.png" title=" Actor clicks on Bot&oacute;n Submit (completed)" width="1440"/>
-                <img src="c06dbfd2b608b3d993a85397140b1856bd587c5ec55042469b790d3c7cd5351f.png" title=" Actor nuevo flujo (completed)" width="1440"/>
-                <img src="c06dbfd2b608b3d993a85397140b1856bd587c5ec55042469b790d3c7cd5351f.png" title=" When Crear nuevo registro en la opcion Web Tables
+                <img src="1fa5d9f3ce8815b7ba63029f1339170302f553922299a242bcb1b7427c6d03e0.png" title=" Actor nuevo flujo" width="1440"/>
+                <img src="1fa5d9f3ce8815b7ba63029f1339170302f553922299a242bcb1b7427c6d03e0.png" title=" Actor clicks on Bot&Atilde;&sup3;n Elements" width="1440"/>
+                <img src="1fa5d9f3ce8815b7ba63029f1339170302f553922299a242bcb1b7427c6d03e0.png" title=" Actor clicks on Bot&Atilde;&sup3;n Web Tables" width="1440"/>
+                <img src="57ee19bb574779543e0c4b95f528c1c19d6a0c639b20c6f7ad9dae3dd0678b4a.png" title=" Actor clicks on Bot&Atilde;&sup3;n Web Tables (completed)" width="1440"/>
+                <img src="c5c69d2574ff66d6937d2af33e349978203368b9d8779e9efe161fcc70cc196a.png" title=" Actor clicks on Bot&Atilde;&sup3;n Add" width="1440"/>
+                <img src="5f1e2e300c09291d9c739ee34c5aacc4429f2dc70167d63463b3cd515ddd68f8.png" title=" Actor clicks on Bot&Atilde;&sup3;n Add (completed)" width="1440"/>
+                <img src="5f1e2e300c09291d9c739ee34c5aacc4429f2dc70167d63463b3cd515ddd68f8.png" title=" Actor clicks on Campo First Name" width="1440"/>
+                <img src="a042e77e52c1be2b2e1307462a6af90401dbd867fff45628b88bf43fffe1d312.png" title=" Actor clicks on Campo First Name (completed)" width="1440"/>
+                <img src="a042e77e52c1be2b2e1307462a6af90401dbd867fff45628b88bf43fffe1d312.png" title=" Actor enters 'Daniel' into Campo First Name" width="1440"/>
+                <img src="a56346766a967e0c929b35f029403e235399059df90019d4e3104cc8b4f276bd.png" title=" Actor enters 'Daniel' into Campo First Name (completed)" width="1440"/>
+                <img src="1a8aad8d28bdafc54035ace269c3989f32f2caa35d33168c4eb1f6dc15667a5b.png" title=" Actor clicks on Campo Last Name" width="1440"/>
+                <img src="f6e512eacd837f4ddef83590f62bc6caf4c306737abf05aff40249e1bb1ef106.png" title=" Actor clicks on Campo Last Name (completed)" width="1440"/>
+                <img src="3cfef8c320403891deeacc5ff9c548b4216cc8f13049cd6b028f3484ace8b3dd.png" title=" Actor enters 'Ramirez' into Campo Last Name" width="1440"/>
+                <img src="e761b0aa09f06c27bfa1582110f527c6f74e42d3aaa1d677d4cc3188fca6bb6d.png" title=" Actor enters 'Ramirez' into Campo Last Name (completed)" width="1440"/>
+                <img src="e761b0aa09f06c27bfa1582110f527c6f74e42d3aaa1d677d4cc3188fca6bb6d.png" title=" Actor clicks on Campo Email" width="1440"/>
+                <img src="c60e91c8e3c098f6e1f5c4af4ac47f3a0c4a82fd2c5f7b790efab4b9999b2d7c.png" title=" Actor clicks on Campo Email (completed)" width="1440"/>
+                <img src="c60e91c8e3c098f6e1f5c4af4ac47f3a0c4a82fd2c5f7b790efab4b9999b2d7c.png" title=" Actor enters 'prueba@gmail.com' into Campo Email" width="1440"/>
+                <img src="2a001ad83e5cdb584f7dcd52e0daa08ba553f7c26ceb09c14ddaafa17facf655.png" title=" Actor enters 'prueba@gmail.com' into Campo Email (completed)" width="1440"/>
+                <img src="2a001ad83e5cdb584f7dcd52e0daa08ba553f7c26ceb09c14ddaafa17facf655.png" title=" Actor clicks on Campo Age" width="1440"/>
+                <img src="f83899b10925f9e200077bb8aaf00f3cc870142e441acbc7b8d6913b4dc0fde6.png" title=" Actor clicks on Campo Age (completed)" width="1440"/>
+                <img src="f83899b10925f9e200077bb8aaf00f3cc870142e441acbc7b8d6913b4dc0fde6.png" title=" Actor enters '28' into Campo Age" width="1440"/>
+                <img src="aa07b818ae5a8dbf84c980284a11fb4edd8fd8777d6983b8b4984a247e2398fe.png" title=" Actor enters '28' into Campo Age (completed)" width="1440"/>
+                <img src="aa07b818ae5a8dbf84c980284a11fb4edd8fd8777d6983b8b4984a247e2398fe.png" title=" Actor clicks on Campo Salary" width="1440"/>
+                <img src="6e46b772f0e9db5b571badb759f8388c468025ac84dbd321ec7aa7b6748e17ef.png" title=" Actor clicks on Campo Salary (completed)" width="1440"/>
+                <img src="6e46b772f0e9db5b571badb759f8388c468025ac84dbd321ec7aa7b6748e17ef.png" title=" Actor enters '2000' into Campo Salary" width="1440"/>
+                <img src="d4e086f89c0904f42a522a68ca7dda691c5904708e462810787ae51fea8a0b62.png" title=" Actor enters '2000' into Campo Salary (completed)" width="1440"/>
+                <img src="d4e086f89c0904f42a522a68ca7dda691c5904708e462810787ae51fea8a0b62.png" title=" Actor clicks on Campo Department" width="1440"/>
+                <img src="bc5e2f113bc5a90101ae5dffd2a2d858197655bc63c8bf63cfa83199a24bfd4f.png" title=" Actor clicks on Campo Department (completed)" width="1440"/>
+                <img src="bc5e2f113bc5a90101ae5dffd2a2d858197655bc63c8bf63cfa83199a24bfd4f.png" title=" Actor enters 'QA Automation' into Campo Department" width="1440"/>
+                <img src="e65958a7419e137aec304c1b696d3500783d73d6c07261b5622b0d7e6755537d.png" title=" Actor enters 'QA Automation' into Campo Department (completed)" width="1440"/>
+                <img src="e65958a7419e137aec304c1b696d3500783d73d6c07261b5622b0d7e6755537d.png" title=" Actor clicks on Bot&Atilde;&sup3;n Submit" width="1440"/>
+                <img src="5e613717097aec6f880c3e3dad249f234f386b18164576c9374b909b4f1dbd6a.png" title=" Actor clicks on Bot&Atilde;&sup3;n Submit (completed)" width="1440"/>
+                <img src="5e613717097aec6f880c3e3dad249f234f386b18164576c9374b909b4f1dbd6a.png" title=" Actor clicks on Bot&Atilde;&sup3;n Submit" width="1440"/>
+                <img src="46632e42d181670138858b1e943f703e610f01c0daa9d8790538a1132ac4a366.png" title=" Actor clicks on Bot&Atilde;&sup3;n Submit (completed)" width="1440"/>
+                <img src="46632e42d181670138858b1e943f703e610f01c0daa9d8790538a1132ac4a366.png" title=" Actor nuevo flujo (completed)" width="1440"/>
+                <img src="46632e42d181670138858b1e943f703e610f01c0daa9d8790538a1132ac4a366.png" title=" When Crear nuevo registro en la opcion Web Tables
 | First_Name | Daniel |
 | Last_Name | Ramirez |
 | Email | prueba@gmail.com |
 | Age | 28 |
 | Salary | 2000 |
 | Department | QA Automation | (completed)" width="1440"/>
-                <img src="3d6924031ca939cd57d8909991925145be3b3db7faf445409b64841bcfb02ea0.png" title=" Then Validar la exitosa creacion del registro de nombre &quot;Daniel&quot;" width="1440"/>
-                <img src="3d6924031ca939cd57d8909991925145be3b3db7faf445409b64841bcfb02ea0.png" title=" Then validar registro should be 'Daniel'" width="1440"/>
-                <img src="3d6924031ca939cd57d8909991925145be3b3db7faf445409b64841bcfb02ea0.png" title=" Then validar registro should be 'Daniel' (completed)" width="1440"/>
-                <img src="3d6924031ca939cd57d8909991925145be3b3db7faf445409b64841bcfb02ea0.png" title=" Then Validar la exitosa creacion del registro de nombre &quot;Daniel&quot; (completed): <span class='success-color'>SUCCESS</span>" width="1440"/>
+                <img src="46632e42d181670138858b1e943f703e610f01c0daa9d8790538a1132ac4a366.png" title=" Then Validar la exitosa creacion del registro de nombre &quot;Daniel&quot;" width="1440"/>
+                <img src="46632e42d181670138858b1e943f703e610f01c0daa9d8790538a1132ac4a366.png" title=" Then validar registro should be 'Daniel': <span class='success-color'>SUCCESS</span>" width="1440"/>
             </div>
         </div>
 
@@ -274,7 +268,7 @@ Para evaluar ciertas funcionalidades
 </div>
 <div id="beforefooter"></div>
 <div id="bottomfooter">
-    <span class="version">Serenity BDD version 2.4.34</span>
+    <span class="version">Serenity BDD version 3.3.4</span>
 </div>
 </body>
 </html>

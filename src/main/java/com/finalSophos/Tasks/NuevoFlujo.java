@@ -41,16 +41,8 @@ public class NuevoFlujo implements Task {
                     Click.on(DEPARTMENT), Enter.theValue(flujouno.getDepartment()).into(DEPARTMENT),
                     Click.on(SUBMIT),
                     Click.on(DELETE)
-
-
-
-
             );
         }
-
-
-
-
 
     public static NuevoFlujo with(DataTable datosTabla) {
         return Tasks.instrumented(NuevoFlujo.class, datosTabla);

@@ -18,10 +18,13 @@ public class ValidarRegistro implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor){
-        return Text.of(target.of(text)).viewedBy(actor).asString();
+
+        return  Text.of(target.of(text)).viewedBy(actor).asString();
+        //return text;
     }
 
     public static ValidarRegistro with(Target target, String text){
+
         return new ValidarRegistro(text, target);
     }
 }
