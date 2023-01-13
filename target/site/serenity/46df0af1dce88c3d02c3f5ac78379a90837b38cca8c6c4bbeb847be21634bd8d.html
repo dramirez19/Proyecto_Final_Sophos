@@ -114,10 +114,7 @@
             "language": {
                 searchPlaceholder: "Filter",
                 search: ""
-            },
-            columnDefs: [
-                {type: 'time-elapsed-dhms', targets: 4}
-            ]
+            }
         });
 
         // Results table
@@ -147,10 +144,13 @@
 
 <div class="middlecontent">
 
+
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
                 > Feature 
+                > <span
+                    class="truncate-60">Automatizacion De Alerts, Frame &amp; Windows (Unsuccessful Tests)</span>
         </span>
         </div>
         <div class="rightbg"></div>
@@ -167,7 +167,7 @@
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-12-2022 21:12:55</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-01-2023 14:02:07</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -176,14 +176,15 @@
         <div class="middlb">
             <div class="table">
 
-                <h2>Test Results: All Tests</h2>
+                <h2><i class='bi bi-tags'></i> Feature: Automatizacion De Alerts, Frame & Windows (Unsuccessful Tests)</h2>
                 <table class='overview'>
                     <tr>
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div>
 
-                                    1 test
+                                1 test
+                                    across 1 scenario
 
                                      |
                                         <a href="d83442ed650b709a14612360027e8e3ef392aaa938c97835dfd0d7d34dc1e625.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
@@ -221,13 +222,13 @@
                                                                     <tbody>
                                                                     <tr scope="row">
                                                                         <td>
-                                                                            <i class="bi bi-card-checklist"></i> Number of Scenarios
+                                                                            <i class="bi bi-card-checklist"></i> Number of Test Cases
                                                                         </td>
                                                                         <td>1</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
-                                                                            <i class="bi bi-caret-right"></i> Number of Test Cases
+                                                                            <i class="bi bi-caret-right"></i> Number of Scenarios
                                                                         </td>
                                                                         <td>1</td>
                                                                     </tr>
@@ -235,43 +236,43 @@
                                                                         <td>
                                                                             <i class="bi bi-flag-fill"></i> Tests Started
                                                                         </td>
-                                                                        <td>Dec 19, 2022 21:12:00</td>
+                                                                        <td>Jan 13, 2023 14:01:46</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests Finished
                                                                         </td>
-                                                                        <td>Dec 19, 2022 21:12:46</td>
+                                                                        <td>Jan 13, 2023 14:02:03</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total Duration
                                                                         </td>
-                                                                        <td>46s</td>
+                                                                        <td>16s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>46s</td>
+                                                                        <td>16s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest Test
                                                                         </td>
-                                                                        <td>46s</td>
+                                                                        <td>16s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average Execution Time
                                                                         </td>
-                                                                        <td>46s</td>
+                                                                        <td>16s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total Execution Time
                                                                         </td>
-                                                                        <td>46s</td>
+                                                                        <td>16s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -298,6 +299,14 @@
                                             </div>
                                             <div class="container-fluid">
                                                 <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <!-- High level coverage bar chart -->
+                                                            <div class="chart-container" style="position: relative; width:60vw">
+                                                                <h3><i class="bi bi-reception-3"></i> Functional Coverage Overview</h3>
+                                                                <h4>Features</h4>
+                                                                <canvas id="coverageChart"></canvas>
+                                                            </div>
+                                                        </div>
                                                 </div>
                                                     <div class="row">
                                                         <div class="col-sm-12">
@@ -318,48 +327,53 @@
                                                         </div>
                                                     </div>
                                             </div>
-
+                                        </div>
+                                        <div id="tests" class="tab-pane fade in">
                                             <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="bi bi-gear"></i> Automated Tests</h3>
 
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h3>Test Failure Overview</h3>
-                                                        </div>
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th>Feature</th>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Started</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result ERROR">
+                                                    <td>
+                                                            <a href="2469aac5a591dddded358a37396b3fac8fa61ca681568fb03ebef6c0ec323e33.html">Automatizacion de Alerts, Frame & Windows</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="e8954026dc6b96cd126d0428b121705a247c3c19226d0972010007e9c8733329.html">Automatizar funcionalidades de Alerts, Frame & Windows -> Alerts</a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>14:01:46</td>
+                                                    <td>16s 720ms</td>
+                                                    <td><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span
+                                                            style="display:none">ERROR</span></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h4>Most Frequent Failures</h4>
-                                                            <table class="table" style="width:40vw;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="error-color top-list-title">
-                                                                            <a href="2604feeea81ae96ceb8f3fd5fe52341709a1dac0abf4ecc596d8c03dc2fb5d7a.html"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> No alert present exception</a>
-                                                                        </td>
-                                                                        <td><span
-                                                                                    class="badge failure-badge">1</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h4>Most Unstable Features</h4>
-                                                            <table class="table" style="width:40vw;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="failure-color top-list-title">
-                                                                            <a href="#">Automatizacion de Alerts, Frame & Windows</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="badge failure-badge">100%</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="bi bi-hand-index-thumb"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
                                                     </div>
+                                                </div>
                                             </div>
-                                            <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
                 <h3>Tags</h3>
@@ -377,52 +391,6 @@
                     </div>
             </div>
         </div>
-                                            </div>
-                                        </div>
-                                        <div id="tests" class="tab-pane fade in">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <h3><i class="bi bi-gear"></i> Automated Tests</h3>
-
-                                            <table class="scenario-result-table table" id="scenario-results">
-                                                <thead>
-                                                <tr>
-                                                    <th>Feature</th>
-                                                    <th class="test-name-column">Scenario</th>
-                                                    <th>Steps</th>
-                                                    <th>Started</th>
-                                                    <th>Total Duration</th>
-                                                    <th>Result</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                        <tr class="scenario-result ERROR">
-                                                            <td>
-                                                                    <a href="2469aac5a591dddded358a37396b3fac8fa61ca681568fb03ebef6c0ec323e33.html">Automatizacion de Alerts, Frame & Windows</a>
-                                                            </td>
-                                                            <td><a href="e8954026dc6b96cd126d0428b121705a247c3c19226d0972010007e9c8733329.html">Automatizar funcionalidades de Alerts, Frame & Windows -> Alerts</a></td>
-                                                            <td>2</td>
-                                                            <td>21:12:00</td>
-                                                            <td>46s 430ms</td>
-                                                            <td><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span style="display:none">ERROR</span>
-                                                            </td>
-                                                        </tr>
-                                                </tbody>
-                                            </table>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <h3><i class="bi bi-hand-index-thumb"></i> Manual Tests</h3>
-
-                                                No manual tests were recorded
-
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -440,7 +408,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.5.0</span>
+            <span class="version">Serenity BDD version 3.1.16</span>
         </div>
     </div>
 </div>
@@ -454,23 +422,23 @@
 
         // Options define for display value on top of bars
         const outcomeDetailsReports = [
-            { title: 'Passing Test Cases', link: "266fa8bb681cd9e7b0e3353e002a7fed64e5a3d43a6cd040be1d7f66a5da774e.html" },
-            { title: 'Pending Test Cases', link: "54a44c12eef19324e9f2e8e9ed80c6d5a6e5a75ad47e4a6545e20cebe2728a2b.html" },
-            { title: 'Ignored Test Cases', link: "de0bcc1d4bf8509cecbf630f02b18ac10dac3a11596aa61e26fdb3932373f8e6.html" },
-            { title: 'Skipped Test Cases', link: "23390e8a26ed824131d655b59e099b466c58948224ba68c3740f4a948f968294.html" },
-            { title: 'Aborted Test Cases',  link: "575bc0dff4c2cd730d09031c77f6dcbab4365cbed2679231cfe3a2f6e031e1c8.html"},
-            { title: 'Failed Test Cases', link: "8e61a7e25c572e481c6b46f97911024c1c5ec2b3e288bf233049720344d94917.html"  },
-            { title: 'Broken Test Cases', link: "2816cbcf326b098cfa18110840320db844509776955b72e8f85cff4a66600807.html"    },
-            { title: 'Compromised Test Cases',  link: "b640fa135a4a800f7090474ef642edffd18ce4fc3cbdddff653123505efc171e.html" },
+            { title: 'Passing Scenarios', link: "266fa8bb681cd9e7b0e3353e002a7fed64e5a3d43a6cd040be1d7f66a5da774e.html" },
+            { title: 'Pending Scenarios', link: "54a44c12eef19324e9f2e8e9ed80c6d5a6e5a75ad47e4a6545e20cebe2728a2b.html" },
+            { title: 'Ignored Scenarios', link: "de0bcc1d4bf8509cecbf630f02b18ac10dac3a11596aa61e26fdb3932373f8e6.html" },
+            { title: 'Skipped Scenarios', link: "23390e8a26ed824131d655b59e099b466c58948224ba68c3740f4a948f968294.html" },
+            { title: 'Aborted Scenarios',  link: "575bc0dff4c2cd730d09031c77f6dcbab4365cbed2679231cfe3a2f6e031e1c8.html"},
+            { title: 'Failed Scenarios', link: "8e61a7e25c572e481c6b46f97911024c1c5ec2b3e288bf233049720344d94917.html"  },
+            { title: 'Broken Scenarios', link: "2816cbcf326b098cfa18110840320db844509776955b72e8f85cff4a66600807.html"    },
+            { title: 'Compromised Scenarios',  link: "b640fa135a4a800f7090474ef642edffd18ce4fc3cbdddff653123505efc171e.html" },
         ]
         const outcomeData = {
-            labels: ['Passing Test Cases', 'Pending Test Cases', 'Ignored Test Cases', 'Skipped Test Cases', 'Aborted Test Cases', 'Failed Test Cases', 'Broken Test Cases', 'Compromised Test Cases','Undefined Test Cases'],
+            labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 1}, {meta: 'Compromised tests', value: 0}],
-                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
+                data: [0,0,0,0,0,0,1,0],
+                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)'],
+                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                 borderWidth: 1,
             }]
         }
@@ -492,7 +460,7 @@
                             sum += data;
                         });
                         let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage === '0%' || percentage === 'NaN%') {
+                        if (percentage === '0%') {
                             return '';
                         } else {
                             return percentage;
@@ -565,15 +533,15 @@
                 {
                     label: 'Automated',
                     data: [0,0,0,0,0,0,1,0],
-                    backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
+                    backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)'],
+                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                     borderWidth: 1
                 },
                 {
                     label: 'Manual',
                     data: [0,0,0,0,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.25)','rgba(165, 199, 238, 0.25)','rgba(168, 168, 168, 0.25)','rgba(238, 224, 152, 0.375)','rgba(255, 153, 102, 0.25)','rgba(255, 22, 49, 0.25)','rgba(255, 97, 8, 0.25)','rgba(255, 104, 255, 0.25)','rgba(83, 50, 168, 0.25)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
+                    backgroundColor: ['rgba(153,204,51,0.25)','rgba(165, 199, 238, 0.25)','rgba(168, 168, 168, 0.25)','rgba(238, 224, 152, 0.375)','rgba(255, 153, 102, 0.25)','rgba(255, 22, 49, 0.25)','rgba(255, 97, 8, 0.25)','rgba(255, 104, 255, 0.25)'],
+                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                     borderWidth: 1
                 },
 
@@ -647,7 +615,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','0','1','0','0','0','0'],
+                data: ['0','0','1','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -698,6 +666,118 @@
     </script>
     <!-- END DURATION CHART -->
 
+
+
+    <!-- COVERAGE BAR CHART -->
+    <script>
+
+        // The coverage bar chart
+        const coverageChartCtx = document.getElementById('coverageChart');
+
+        // Options define for display value on top of bars
+
+        const coverageReports = [
+            {
+                title: 'Automatizacion de Alerts, Frame & Windows',
+                result: 'ERROR',
+                link: "2469aac5a591dddded358a37396b3fac8fa61ca681568fb03ebef6c0ec323e33.html"
+            },
+        ]
+        const coverageData = {
+            labels: [
+                'Automatizacion de Alerts, Frame & Windows',
+            ],
+            datasets: [
+                {
+                    label: ['Passing Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(153,204,51,0.5)' ]
+                },
+                {
+                    label: ['Pending Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(165, 199, 238, 0.5)' ]
+                },
+                {
+                    label: ['Ignored Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(168, 168, 168, 0.5)' ]
+                },
+                {
+                    label: ['Skipped Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(238, 224, 152, 0.75)' ]
+                },
+                {
+                    label: ['Aborted Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(255, 153, 102, 0.5)' ]
+                },
+                {
+                    label: ['Failed Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(255, 22, 49, 0.5)' ]
+                },
+                {
+                    label: ['Errors'],
+                    data: [1],
+                    backgroundColor: [ 'rgba(255, 97, 8, 0.5)' ]
+                },
+                {
+                    label: ['Compromised Tests'],
+                    data: [null],
+                    backgroundColor: [ 'rgba(255, 104, 255, 0.5)' ]
+                },
+            ]
+        }
+        const coverageOptions = {
+            responsive: true,
+            indexAxis: 'y',
+            // barPercentage: ,
+            barThickness: 'flex',
+            maxBarThickness: 30,
+            minBarLength: 2,
+            skipNull: true,
+            scales: {
+                x: {
+                    stacked: true,
+                },
+                y: {
+                    stacked: true,
+                }
+            },
+            plugins: {
+                // Change options for ALL labels of THIS CHART
+                datalabels: {
+                    color: '#444444',
+                    'font.weight': 'bold'
+                },
+                tooltip: {
+                    enabled: true,
+                    usePointStyle: true,
+                },
+            },
+        }
+
+        const coverageChart = new Chart(coverageChartCtx, {
+            type: 'bar',
+            data: coverageData,
+            options: coverageOptions
+        });
+
+        function coverageClickHandler(click) {
+            const points = coverageChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
+            if (points.length) {
+                const firstPoint = points[0];
+                if (coverageReports[firstPoint.index].link) {
+                    window.open(coverageReports[firstPoint.index].link, "_self")
+                }
+            }
+        }
+
+        coverageChartCtx.onclick = coverageClickHandler;
+    </script>
+    <!-- END COVERAGE CHART -->
 
 </body>
 </html>

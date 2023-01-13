@@ -24,7 +24,7 @@ public class NuevoFlujoDos implements Task {
                 Click.on(FlujoDosPage.WIDGET),
                 Scroll.to(FlujoDosPage.DATE_PICKER),
                 Click.on(FlujoDosPage.DATE_PICKER),
-                Click.on(FlujoDosPage.SELECT_DATE),
+                Scroll.to(FlujoDosPage.SELECT_DATE), Click.on(FlujoDosPage.SELECT_DATE),
                 Click.on(FlujoDosPage.SELECT_DAY.of(fecha)),
                 Click.on(FlujoDosPage.SELECT_DATE_TIME),
                 Click.on(FlujoDosPage.SELECT_DAY.of(fecha)),

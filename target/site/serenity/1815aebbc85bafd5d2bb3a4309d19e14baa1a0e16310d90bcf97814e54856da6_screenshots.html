@@ -23,19 +23,31 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -59,16 +71,7 @@
 </script>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/link.css"/>
-<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
-<!--CHART.JS-->
-<script src="chartjs/chart.js"></script>
-<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/patternomaly.min.js"></script>
-<script>
-    // Register the plugin to all charts:
-    Chart.register(ChartDataLabels);
-</script>
-<!-- Nivo Slider -->
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
 <link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
 <script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
@@ -142,13 +145,13 @@
 <div>
     <ul class="nav nav-tabs" role="tablist">
         <li class="active">
-            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
         </li>
         <li >
-            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-12-2022 15:35</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 13-01-2023 13:59</span>
     <br style="clear:left"/>
 </div>
 
@@ -163,7 +166,7 @@
                         <td>
                             <div>
                                 <h3 class="discreet-story-header">
-                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <i class="fa fa-2x fa-comments-o"></i>
                                     <span class="story-header-title">Automatizacion De Widgets -&gt; Date Picker</span>
                                     <span class="badge tag-badge" style="">Feature</span>
                                 </h3>
@@ -188,7 +191,7 @@ Para evaluar ciertas funcionalidades
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">Automatizar funcionalidades de Widgets -&gt; Date Picker
                                     <span class="related-issue-title"></span>
@@ -209,27 +212,27 @@ Para evaluar ciertas funcionalidades
     <div id="contenttilttle">
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="60eb3ddf06668f0417a9a0a77705ba2cf3a8d5c7c6e0f652718b33f3cd0f209b.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot;" width="1440"/>
-                <img src="60eb3ddf06668f0417a9a0a77705ba2cf3a8d5c7c6e0f652718b33f3cd0f209b.png" title=" Actor opens the browser at https://demoqa.com/" width="1440"/>
-                <img src="60eb3ddf06668f0417a9a0a77705ba2cf3a8d5c7c6e0f652718b33f3cd0f209b.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot; (completed)" width="1440"/>
-                <img src="4b72fc4f7db4c64f1427de81a670f1e41674ea5c6ffe80b0db949297eb530f71.png" title=" When Seleccionar la fecha &quot;20&quot; y Seleccionar la hora &quot;20:00&quot; en el Date Picker" width="1440"/>
-                <img src="4b72fc4f7db4c64f1427de81a670f1e41674ea5c6ffe80b0db949297eb530f71.png" title=" Actor nuevo flujo dos" width="1440"/>
-                <img src="4b72fc4f7db4c64f1427de81a670f1e41674ea5c6ffe80b0db949297eb530f71.png" title=" Actor clicks on Bot&Atilde;&sup3;n Widget" width="1440"/>
-                <img src="93f95cf84efcddc7c42882369348f2c3cd14df8f639c979c65368c3337cc44d1.png" title=" Actor clicks on Bot&Atilde;&sup3;n Widget (completed)" width="1440"/>
-                <img src="e67e07cbe716200e6e82f9041e1b7f5acfa8f720c9c09da9ebab99345d035ade.png" title=" Actor clicks on Bot&Atilde;&sup3;n Date Picker" width="1440"/>
-                <img src="52ac990e2d3f5c6b3f3780082688dd204b0d2fdaabc5cd365985c13d1be74237.png" title=" Actor clicks on Bot&Atilde;&sup3;n Date Picker (completed)" width="1440"/>
-                <img src="52ac990e2d3f5c6b3f3780082688dd204b0d2fdaabc5cd365985c13d1be74237.png" title=" Actor clicks on Campo Select Date" width="1440"/>
-                <img src="a16be27bf4e024791c32651a9400fbdbd807dab0c115ee07660cf28c2c1d192a.png" title=" Actor clicks on Campo Select Date (completed)" width="1440"/>
-                <img src="a16be27bf4e024791c32651a9400fbdbd807dab0c115ee07660cf28c2c1d192a.png" title=" Actor clicks on Campo Select Day" width="1440"/>
-                <img src="3520e76fe23c1109d0a31d10a730fc696c9c64eaf7827b1ddc129ea5dc15b168.png" title=" Actor clicks on Campo Select Day (completed)" width="1440"/>
-                <img src="3520e76fe23c1109d0a31d10a730fc696c9c64eaf7827b1ddc129ea5dc15b168.png" title=" Actor clicks on Campo Select Time" width="1440"/>
-                <img src="88c4f88b2487384191ec13b0cc51b65d55aab7aa4f64c9e9362c43340d465db8.png" title=" Actor clicks on Campo Select Time (completed)" width="1440"/>
-                <img src="83d462e99bddd9a0fb3cab4acc73e0537325642a16afa4a1778233ef26322daf.png" title=" Actor clicks on Campo Select Day" width="1440"/>
-                <img src="c8e21e3837af44e65297fded45aae19152c4d09133d06a05e87a23aea713223f.png" title=" Actor clicks on Campo Select Day (completed)" width="1440"/>
-                <img src="c8e21e3837af44e65297fded45aae19152c4d09133d06a05e87a23aea713223f.png" title=" Actor clicks on Campo Select Time" width="1440"/>
-                <img src="08bfb4905de016029740a9bf460cadb3202349189f1ccf3315202c9f7de632ce.png" title=" Actor clicks on Campo Select Time (completed)" width="1440"/>
-                <img src="08bfb4905de016029740a9bf460cadb3202349189f1ccf3315202c9f7de632ce.png" title=" Actor nuevo flujo dos (completed)" width="1440"/>
-                <img src="08bfb4905de016029740a9bf460cadb3202349189f1ccf3315202c9f7de632ce.png" title=" When Seleccionar la fecha &quot;20&quot; y Seleccionar la hora &quot;20:00&quot; en el Date Picker (completed): <span class='success-color'>SUCCESS</span>" width="1440"/>
+                <img src="c91206526c1a810a50568030db4751f8156d32eaead1f9910eea71678eaea723.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot;" width="1366"/>
+                <img src="c91206526c1a810a50568030db4751f8156d32eaead1f9910eea71678eaea723.png" title=" Actor opens the https://demoqa.com/" width="1366"/>
+                <img src="c91206526c1a810a50568030db4751f8156d32eaead1f9910eea71678eaea723.png" title=" Given &quot;Actor&quot; Desea navegar a la pagina web &quot;https://demoqa.com/&quot; (completed)" width="1366"/>
+                <img src="9c9f59bea4e7694537821c97e0526ab3aaae1fc9a75779fce0d878b185c82c7d.png" title=" When Seleccionar la fecha &quot;20&quot; y Seleccionar la hora &quot;20:00&quot; en el Date Picker" width="1366"/>
+                <img src="9c9f59bea4e7694537821c97e0526ab3aaae1fc9a75779fce0d878b185c82c7d.png" title=" Actor nuevo flujo dos" width="1366"/>
+                <img src="9c9f59bea4e7694537821c97e0526ab3aaae1fc9a75779fce0d878b185c82c7d.png" title=" Actor clicks on Bot&oacute;n Widget" width="1366"/>
+                <img src="f60ad0488802f1987f574657e9e366ee86c640babe05361b423703dc7ee773a4.png" title=" Actor clicks on Bot&oacute;n Widget (completed)" width="1366"/>
+                <img src="7357bae7e52b4992d43508fbf0f99c77dcb47acb0c31d6beb6dbc566b556a80e.png" title=" Actor clicks on Bot&oacute;n Date Picker" width="1366"/>
+                <img src="8cf444eda25e76f76ae7d8f3d2bb9dac958a33ff3f6367248256905ac66c4da3.png" title=" Actor clicks on Bot&oacute;n Date Picker (completed)" width="1366"/>
+                <img src="851672cf899f8bb58bd564fdeb973f4751f177a0933a7b7834c0e7571168e97f.png" title=" Actor clicks on Campo Select Date" width="1366"/>
+                <img src="e0101facb4a961abff938256fc3e3d3061bf9dd5bde5a6c80c3be61b86d8f42a.png" title=" Actor clicks on Campo Select Date (completed)" width="1366"/>
+                <img src="e0101facb4a961abff938256fc3e3d3061bf9dd5bde5a6c80c3be61b86d8f42a.png" title=" Actor clicks on Campo Select Day" width="1366"/>
+                <img src="81ba83dfe6d40edb6b5f703db21935764201c09d3c2d91fffe2dfa1ca75b3453.png" title=" Actor clicks on Campo Select Day (completed)" width="1366"/>
+                <img src="81ba83dfe6d40edb6b5f703db21935764201c09d3c2d91fffe2dfa1ca75b3453.png" title=" Actor clicks on Campo Select Time" width="1366"/>
+                <img src="bf8d0d248a972cf8fb6bc6c0d20ce861d9b58a6dcd5c05378c17b8bc08d62874.png" title=" Actor clicks on Campo Select Time (completed)" width="1366"/>
+                <img src="bf8d0d248a972cf8fb6bc6c0d20ce861d9b58a6dcd5c05378c17b8bc08d62874.png" title=" Actor clicks on Campo Select Day" width="1366"/>
+                <img src="d29c31b31b8f3c64557d18925c3b681e8a86e1897b6048b753b8eed37bf22613.png" title=" Actor clicks on Campo Select Day (completed)" width="1366"/>
+                <img src="d29c31b31b8f3c64557d18925c3b681e8a86e1897b6048b753b8eed37bf22613.png" title=" Actor clicks on Campo Select Time" width="1366"/>
+                <img src="1af35704f9ff59a3f1bd539aa5235be30fe3b3b3700ea9d06e03f56a04e53759.png" title=" Actor clicks on Campo Select Time (completed)" width="1366"/>
+                <img src="1af35704f9ff59a3f1bd539aa5235be30fe3b3b3700ea9d06e03f56a04e53759.png" title=" Actor nuevo flujo dos (completed)" width="1366"/>
+                <img src="1af35704f9ff59a3f1bd539aa5235be30fe3b3b3700ea9d06e03f56a04e53759.png" title=" When Seleccionar la fecha &quot;20&quot; y Seleccionar la hora &quot;20:00&quot; en el Date Picker (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
             </div>
         </div>
 
@@ -238,7 +241,7 @@ Para evaluar ciertas funcionalidades
 </div>
 <div id="beforefooter"></div>
 <div id="bottomfooter">
-    <span class="version">Serenity BDD version 3.3.4</span>
+    <span class="version">Serenity BDD version 2.4.34</span>
 </div>
 </body>
 </html>
