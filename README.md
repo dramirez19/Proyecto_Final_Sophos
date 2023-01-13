@@ -16,7 +16,7 @@ Versiones de herramientas:
 - Java: 17
 
 Para clonar repositorio:
-- git clone git@github.com:dramirez19/Prueba_Choucair.git
+- git clone git@github.com:dramirez19/Proyecto_Final_Sophos.git
 
 Información SonarQube
 
